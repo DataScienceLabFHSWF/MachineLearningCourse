@@ -1,0 +1,62 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Machine Learning \\ Exercise 4: Applications of the Naive Bayes classifier}
+\author{Prof. Dr. Thomas Kopinski}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This week you will get more familiar with two different variants of the \emph{Naive Bayes} classifier as well as the handling and preprocessing of text data. Additionally this exercise focuses on giving you a glimpse into the automated encoding of categorical data.
+\end{abstract}
+
+\section*{Task 1:}
+\begin{itemize}
+   % \item Additional information about implementing linear regression in python can again be found \href{https://github.com/DataScienceLabFHSWF/machine-learning-book/blob/main/notebooks/ch09/ch09.ipynb}{here}.
+    \item Please download the Jupyter notebook for this exercise from \href{https://github.com/DataScienceLabFHSWF/MachineLearningCourse/tree/main/notebooks/04}{here} as it contains some useful information, code snippets, help and some directions for the following tasks.
+    \item Work through the examples in the notebook up to the section \emph{Task 2}. 
+    \item Additional information about the \emph{Bayes theorem} as well as the \emph{Naive Bayes} classifier can be found in the course material.
+    \item \href{https://www.youtube.com/watch?v=O2L2Uv9pdDA}{This} Youtube video provides a great general overview over the ideas behind this classifier and its (manual) application towards a toy spam dataset.
+\end{itemize}
+
+\section*{Task 2: Multinomial Naive Bayes}
+\begin{itemize}
+    \item In this task we will implement a \emph{Multinomial Naive Bayes} classifier to predict spam emails.
+    \item Download the "emails.csv" dataset from \href{https://github.com/DataScienceLabFHSWF/MachineLearningCourse/tree/main/data/04}{here}.
+    \item Load the dataset into a dataframe and get an overview about its content.
+    \item Visualize different aspects of the dataset (e.g. class distribution, text length of the different entries)
+    \item Add an extra column called \emph{length} to the dataframe where to store the length of each samples text.
+    \item Display the shortest and longest message(s) in the email dataset.
+    \item Look up the python package \emph{wordcloud} and use it to visualize the data, categorized by spam or non-spam.
+    \item Preprocess the dataframe and use \emph{CountVectorizer} to generate the features we need for the training process.
+    \item Classify the spam dataset with a multinomial Naive Bayes as your underlying model. It can be implemented via \emph{sklearn.naive\_bayes.MultinomialNB}. What is the score on your test data? Create a few sample "mails" of your own to feed into the trained classifier and evaluate them. Do you also have to transform these samples by applying the \emph{CountVectorizer}? 
+    \item Create a classification report as well as a confusion matrix and display the latter by utilizing the \emph{seaborn} packages' heatmap.
+\end{itemize}
+
+\section*{Task 3: Categorical Naive Bayes}
+\begin{itemize}
+    \item As the name already suggests, this variant is applied on categorical data. You will only have to deal with a very small dataset in this task as the focus lies on the general understanding of the approach to this type of data when using a \emph{Naive Bayes} classifier.
+    \item Download the "flu.csv" dataset from \href{https://github.com/DataScienceLabFHSWF/MachineLearningCourse/tree/main/data/04}{here}.
+    \item Load the dataset into a dataframe and take a look at it. Which are the feature columns, which column the target?
+    \item Make yourself familiar with the \emph{sklearn.preprocessing.LabelEncoder()} and use it to encode the feature columns.
+    \item Create a new dataframe from the encoded feature columns (\emph{zip()}) and use it to fit a \emph{Categorical Naive Bayes} classifier (sklearn.naive\_bayes.CategoricalNB).
+    \item Generate a few input samples to feed into the classifier. Print the predictions as well as the predicted probabilities for each target class (\emph{model.predict\_proba()}).
+\end{itemize}
+
+%\bibliographystyle{alpha}
+%\bibliography{sample}
+
+\end{document}
