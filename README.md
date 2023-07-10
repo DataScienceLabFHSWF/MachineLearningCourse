@@ -1,7 +1,7 @@
 Machine Learning
 ==========
 
-- **Course**: Data Science
+- **Course**: Machine Learning
 - **Instructor**: Thomas Kopinski
 - **Semester**: Winter 23/24
 - **Time**: ---
