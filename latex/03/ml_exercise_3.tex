@@ -1,0 +1,65 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Machine Learning \\ Exercise 3: Usage of different regression algorithms in python}
+\author{Prof. Dr. Thomas Kopinski}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The goal of this exercise is to use python and scikit-learn to perform logistic and polynomial regression on different datasets.
+\end{abstract}
+
+\section*{Task 1: Getting familiar with the regression algorithms}
+
+\begin{itemize}
+    \item Further information and examples about the implementation of logistic regression can be found in  \href{https://github.com/rasbt/machine-learning-book/blob/main/ch03/ch03.ipynb}{this} jupyter notebook.
+    \item Additional information about polynomial regression in python can again be found \href{https://github.com/DataScienceLabFHSWF/machine-learning-book/blob/main/notebooks/ch09/ch09.ipynb}{here}.
+    \item Make sure that you understand the concepts you are trying to implement before starting to write any code.
+\end{itemize}
+
+\section*{Task 2: Logistic Regression}
+
+\begin{itemize}
+   \item Download the MNIST Dataset with the scikit-learn function: \\ \emph{sklearn.datasets.fetch\_openml("mnist\_784")}
+   \item Look into the data and analyze the data structure (eg. data and label shape)
+   \item Why is logistic regression a good approach for this dataset? What is the difference when compared to linear regression?
+   \item Plot some samples of the data with matplotlib
+   \item Split the data into training and test dataset
+   \item Classify the MNIST dataset with a logistic regression model (scikit-learn)
+   \item Evaluate the model performance using the accuracy
+   \item Utilize and interpret the output of the two scikit-learn methods \emph{proba()} and \emph{predict\_proba()}. What is the difference here?
+   \item Display a sample of the wrong predictions to understand the models shortfalls
+\end{itemize}
+
+\section*{Task 3: Polynomial Regression}
+
+\begin{itemize}
+    \item What is the use-case for Polynomial Regression? Why and when would you use it instead of Linear Regression?
+    \item Read the data \\
+    x = np.arange(0, 30) \\
+    y = [3, 4, 5, 7, 10, 8, 9, 10, 10, 23, 27, 44, 50, 63, 67, 60, 62, 70, 75, 88, 81, 87, 95, 100, 108, 135, 151, 160, 169, 179]
+    \item Use matplotlib to display the data
+    \item Create polynomial features of degree 2, 5 and 10 from the input data using the\\ \emph{sklearn.preprocessing.PolynomialFeatures()} function
+    \item Use Linear Regression models to fit to the transformed and untransformed data. 
+    \item Plot the models together with the data and evaluate the model performances. What do you notice? What might be the problem here when using higher-degree polynomials?
+    \item Repeat the steps above, but this time use the \emph{numpy.polyfit()} method to fit a model to the data and compare it to the previous models
+\end{itemize}
+
+%\bibliographystyle{alpha}
+%\bibliography{sample}
+
+\end{document}

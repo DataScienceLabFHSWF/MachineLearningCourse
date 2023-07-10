@@ -1,0 +1,51 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Machine Learning \\ Exercise 2: Manual implementation of linear regression in python}
+\author{Prof. Dr. Thomas Kopinski}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This week's tasks focus on deepening your knowledge about linear regression by manually implementing the underlying algorithm in python. 
+\end{abstract}
+
+\section*{Task 1: Understand the algorithm}
+
+\begin{itemize}
+    \item Additional information about implementing linear regression in python can again be found \href{https://github.com/DataScienceLabFHSWF/machine-learning-book/blob/main/notebooks/ch09/ch09.ipynb}{here}.
+    \item Make sure you understand how the algorithm works before you start implementing any python code.
+    \item Try to structure your code in a clear way, e.g. by using functions and object oriented programming.
+\end{itemize}
+\section*{Task 2: Implement a general least squares optimizer}
+
+\begin{itemize}
+    \item Consider an array of x-values with a variable length with corresponding y-values and statistical errors $y_{err}$
+    \item x = [1.47,1.50 ,1.52,1.55 ,1.57, 1.60,1.63,1.65,1.68,1.70,1.73,1.75,1.78,1.80,1.83]
+    \item y = [52.21,53.12,54.48,55.84,57.20,58.57,59.93,61.29,63.11,64.47,66.28,68.10,69.92,72.19,74.46]
+    \item $y_{err}$ is 1 for each y
+    \item Define an empty matrix $A$ of shape (len(x), 2)
+    \item Fill the matrix with the values $A_{i,0}$ = 1 and $A_{i,1}=x$
+    \item Define a diagonal matrix $W$ from the $y_{err}$ such that $W_{i,i} = \frac{1}{y_{err}^2} $
+    \item Reshape the array of y vectors into a column vector
+    \item Calculate the result of the function $p = (A^T W A)^{-1} A^T y$ and $cov = (A^T W A)^{-1}$ (Hint: use the Invert-Method for numpy matrices)
+    \item Display the coeffictients results and plot the data and fit function (Hint: for errorbars use plt.errorbar)
+\end{itemize}
+
+%\bibliographystyle{alpha}
+%\bibliography{sample}
+
+\end{document}
