@@ -1,0 +1,9 @@
+\section*{Task 3: Bayes Theorem}
+A newly developed machine can detect counterfeit bills. We define the event
+A: "The machine sounds an alarm", and event F: "The banknote is counterfeit". We would now like to
+find out how high the probability is that a banknote is actually a counterfeit,
+given the machine sounds the alarm. So what we are looking for is $P(F|A)$. The machine was tested with many
+real and fake bills. It was found that the machine alarms on a counterfeit bill with 96\% confidence.
+with 96\% certainty. However, the machine also gives an alarm for 1\% of the real bills.
+alarm. In addition, it is known that 0.01\% of all banknotes in circulation are counterfeits.
+are counterfeits. This also means that 99.99\% of the banknotes are not counterfeits.

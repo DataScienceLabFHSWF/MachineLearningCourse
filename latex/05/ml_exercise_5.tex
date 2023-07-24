@@ -1,0 +1,57 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Machine Learning \\ Exercise 5: Dimensionality Reduction with PCA}
+\author{Prof. Dr. Thomas Kopinski}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In this exercise you will learn how to use \emph{Principal Component Analysis} (PCA) to extract meaningful information from different datasets by reducing the dimension of the provided data.
+\end{abstract}
+
+\section*{Task 1:}
+\begin{itemize}
+    \item Please download the Jupyter notebook for this exercise from \href{https://github.com/DataScienceLabFHSWF/MachineLearningCourse/tree/main/exercises/05}{here} as it contains useful information, code snippets, help and some directions for the following tasks. Additionaly please download the "wine.data" dataset from \href{https://github.com/DataScienceLabFHSWF/MachineLearningCourse/tree/main/data/05}{here}. 
+    \item Work through the examples in the notebook up to the section \emph{Task 2}. 
+    \item Additional information about the \emph{PCA} can be found in the course material.
+\end{itemize}
+
+\section*{Task 2: Iris dataset}
+\begin{itemize}
+    \item In this task you will implement various classifiers to predict the species of Iris flowers, on the original, preprocessed data as well as on the PCA-transformed ones.
+    \item Download the "IRIS.csv" dataset from \href{https://github.com/DataScienceLabFHSWF/MachineLearningCourse/tree/main/data/05}{here}.
+    \item Load the dataset into a dataframe and get an overview about its content.
+    \item Visualize different aspects of the dataset (e.g. class distribution, distribution of the individual features)
+    \item Use the seaborn package to plot a correlation matrix of the dataframe (seaborn.heatmap())
+    \item Preprocess the data.
+    \item Choose several suitable classifiers, train the models and compare and visualize the results for untransformed and transformed data.
+\end{itemize}
+
+\section*{Task 3: Credit dataset}
+\begin{itemize}
+    \item This time you have to deal with the "credit" dataset which can be found \href{https://github.com/DataScienceLabFHSWF/MachineLearningCourse/tree/main/data/05}{here}. 
+    \item Load the dataset into a dataframe and take a look at it. Which are the feature columns, which column the target? Any correlations?
+    \item Try to deal with the missing data (replace, delete, etc.)
+    \item Encode the variable features.
+    \item Use PCA on the cleaned dataframe. What are your findings? How many components would you choose?
+    \item Train, test, evaluate and plot various combinations of models and PCA-transformations.
+\end{itemize}
+
+%\bibliographystyle{alpha}
+%\bibliography{sample}
+
+\end{document}

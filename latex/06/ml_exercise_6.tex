@@ -1,0 +1,59 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Machine Learning \\ Exercise 6: Perceptron: Learning rule and implementation}
+\author{Prof. Dr. Thomas Kopinski}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This exercise focuses on the \emph{perceptron} and its ability to solve linearly separable problems as well as the learning process that helps it reach its goal.  You will start off by manually calculating the latter before implementing it in python during the last task.
+\end{abstract}
+
+\section*{Task 1: Sketching}
+\begin{itemize}
+    \item Task 1 has to be performed by hand!
+    \item Additional information about the \emph{perceptron} can be found in the course material.
+    \item Draw a detailled and correctly labeled sketch of a perceptron with 3 input nodes.
+    \item Write down the learning rule for the perceptron and explain it in a few sentences.
+    \item Create binary AND and XOR tables for two input variables each.
+    \item Create one scatterplot each for the AND and XOR tables and try to separate the data with a single line.
+\end{itemize}
+
+\section*{Task 2: Manual Calculations}
+\begin{itemize}
+    \item Task 2 also has to be performed by hand! 
+    \item Take your two tables and calculate the learning process for both of them, given the following parameters:
+    \begin{itemize}
+        \item Learning rate (AND,XOR): 0.1
+        \item AND initial values: w\textsubscript{1}: 0.6, w\textsubscript{2}: 1, bias: 0.2
+        \item XOR initial values: w\textsubscript{1}: -0.5, w\textsubscript{2}: 0.6, bias: 0.2
+    \end{itemize}
+    \item You can stop after 5 epochs or whenever your accuracy reaches 1, whatever comes first.
+    \item What do you notice? How can you explain it when looking at the scatterplots from task 1?
+\end{itemize}
+
+\section*{Task 3: Implementation in python}
+\begin{itemize}
+    \item Now you are finally allowed to use your computer again.
+    \item Please download the Jupyter notebook for this exercise from \href{https://github.com/DataScienceLabFHSWF/MachineLearningCourse/tree/main/notebooks/06}{here} as it contains useful information, code snippets, help and some directions for the following tasks.
+    \item Follow the instructions in the notebook. 
+\end{itemize}
+
+%\bibliographystyle{alpha}
+%\bibliography{sample}
+
+\end{document}
