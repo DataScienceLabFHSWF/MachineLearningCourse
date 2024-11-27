@@ -16,7 +16,7 @@ class EmployeeRetention:
 
 
 employee_data = [(EmployeeRetention(row[0], row[1], row[2], row[3], row[4])) for index, row in
-                 pd.read_csv("employee_logreg_data.txt").iterrows()]
+                 pd.read_csv("data/employee_logreg_data.txt").iterrows()]
 
 
 best_likelihood = -100_000_000_000.0

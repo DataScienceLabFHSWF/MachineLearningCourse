@@ -14,7 +14,7 @@ class BankTransaction:
 
 
 bank_transactions = [(BankTransaction(row[0], row[1], row[2], row[3])) for index, row in
-                     pd.read_csv("bayes_bank.txt").iterrows()]
+                     pd.read_csv("data/bayes_bank.txt").iterrows()]
 
 categories = set(bt.category for bt in bank_transactions)
 

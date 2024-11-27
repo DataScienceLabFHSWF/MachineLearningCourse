@@ -36,7 +36,7 @@ def points_for_centroid(centroid):
 k = 4
 
 # Declare points
-points = [(Point(row.x, row.y)) for index, row in pd.read_csv("kmeans_data.txt").iterrows()]
+points = [(Point(row.x, row.y)) for index, row in pd.read_csv("data/kmeans_data.txt").iterrows()]
 
 # Declare centroids
 centroids = [Point(0, 0) for i in range(k)]

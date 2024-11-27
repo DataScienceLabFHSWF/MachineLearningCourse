@@ -11,7 +11,7 @@ class Point:
         return "{0},{1}".format(self.x, self.y)
 
 
-points = [(Point(row.x, row.y)) for index, row in pd.read_csv("linreg_data.txt").iterrows()]
+points = [(Point(row.x, row.y)) for index, row in pd.read_csv("data/linreg_data.txt").iterrows()]
 
 # Building the model
 m = 1.9400453587449547

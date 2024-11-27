@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from scipy import special
 
-training_data = pd.read_csv("nn_data.txt")
+training_data = pd.read_csv("data/nn_data.txt")
 training_data_count = len(training_data.index)
 
 # Learning rate controls how slowly we approach a solution
